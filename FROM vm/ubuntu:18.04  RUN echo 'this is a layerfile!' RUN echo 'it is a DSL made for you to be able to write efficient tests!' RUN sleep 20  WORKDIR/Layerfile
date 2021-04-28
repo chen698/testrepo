@@ -1,0 +1,13 @@
+FROM vm/ubuntu:18.04
+
+RUN echo 'this is a layerfile!'
+RUN echo 'it is a DSL made for you to be able to write efficient tests!'
+RUN sleep 20
+
+WORKDIR /app
+COPY . .
+RUN BACKGROUND cat thefile
+
+RUN sleep 15
+
+RUN echo 'in total, this test takes about 45 seconds to run.'
