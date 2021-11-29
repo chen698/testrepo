@@ -1,13 +1,24 @@
 FROM vm/ubuntu:18.04
-
-RUN echo 'this is a layerfile!'
-RUN echo 'it is a DSL made for you to be able to write efficient tests!'
-RUN sleep 20
-
-WORKDIR /app
 COPY . .
-RUN BACKGROUND cat thefile
+# To note: Layerfiles create entire VMs, *not* containers!
+RUN apt-get update && apt-get upgrade
+RUN curl -fSsL https://deb.nodesource.com/setup_16.x | bash && \
+    apt-get install nodejs python3 python3-pip make gcc build-essential chromium-browser
+RUN pip3 install junit2html
 
-RUN sleep 15
+# node is a memory hog
+MEMORY 2G
+ENV NODE_OPTIONS=--max-old-space-size=8192
 
-RUN echo 'in total, this test takes about 45 seconds to run.'
+WORKDIR app
+RUN npm install
+RUN npm run build
+
+WORKDIR ../lib
+RUN npm install
+COPY ./lib/fellow.xml /layercidata/junitXML/fellow.xml
+RUN BACKGROUND npm start
+
+# Create a unique link to share the app in this runner.
+# Every time someone clicks the link, we'll wake up this staging server.
+EXPOSE WEBSITE http://localhost:3000
