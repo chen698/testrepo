@@ -1,0 +1,68 @@
+{
+    "DBName": "",
+    "DBInstanceIdentifier": "testtest",
+    "AllocatedStorage": 20,
+    "DBInstanceClass": "db.t3.micro",
+    "Engine": "mysql",
+    "MasterUsername": "admin",
+    "MasterUserPassword": "secret99",
+    "DBSecurityGroups": [
+        ""
+    ],
+    "VpcSecurityGroupIds": [
+        ""
+    ],
+    "AvailabilityZone": "",
+    "DBSubnetGroupName": "",
+    "PreferredMaintenanceWindow": "",
+    "DBParameterGroupName": "",
+    "BackupRetentionPeriod": 0,
+    "PreferredBackupWindow": "",
+    "Port": 0,
+    "MultiAZ": true,
+    "EngineVersion": "",
+    "AutoMinorVersionUpgrade": true,
+    "LicenseModel": "",
+    "Iops": 0,
+    "OptionGroupName": "",
+    "CharacterSetName": "",
+    "NcharCharacterSetName": "",
+    "PubliclyAccessible": true,
+    "Tags": [
+        {
+            "Key": "",
+            "Value": ""
+        }
+    ],
+    "DBClusterIdentifier": "",
+    "StorageType": "",
+    "TdeCredentialArn": "",
+    "TdeCredentialPassword": "",
+    "StorageEncrypted": true,
+    "KmsKeyId": "",
+    "Domain": "",
+    "CopyTagsToSnapshot": true,
+    "MonitoringInterval": 0,
+    "MonitoringRoleArn": "",
+    "DomainIAMRoleName": "",
+    "PromotionTier": 0,
+    "Timezone": "",
+    "EnableIAMDatabaseAuthentication": true,
+    "EnablePerformanceInsights": true,
+    "PerformanceInsightsKMSKeyId": "",
+    "PerformanceInsightsRetentionPeriod": 0,
+    "EnableCloudwatchLogsExports": [
+        ""
+    ],
+    "ProcessorFeatures": [
+        {
+            "Name": "",
+            "Value": ""
+        }
+    ],
+    "DeletionProtection": true,
+    "MaxAllocatedStorage": 0,
+    "EnableCustomerOwnedIp": true,
+    "CustomIamInstanceProfile": "",
+    "BackupTarget": ""
+}
