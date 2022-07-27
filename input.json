@@ -1,0 +1,9 @@
+{
+    "DBName": "",
+    "DBInstanceIdentifier": "testtest",
+    "AllocatedStorage": 20,
+    "DBInstanceClass": "db.t3.micro",
+    "Engine": "mysql",
+    "MasterUsername": "admin",
+    "MasterUserPassword": "secret99"
+}
