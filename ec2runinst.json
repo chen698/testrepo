@@ -1,0 +1,10 @@
+{
+    "DryRun": true,
+    "ImageId": "ami-040d909ea4e56f8f3",
+    "KeyName": "MyKeyPair",
+    "InstanceType": "t2.micro",
+    "IamInstanceProfile" : {
+	   "Name": "ecsInstanceRole"
+    },
+    "UserData": "#!\/bin\/bash\necho \"ECS_CLUSTER=calcom\" >> /etc/ecs/ecs.config"
+}
